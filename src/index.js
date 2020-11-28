@@ -5,23 +5,19 @@ import emojipedia from "./emojipedia";
 // import App from "./App";
 
 // ReactDOM.render(<App/>,document.getElementById("root"));
-const numbers = [10,4,56,78,23,45,6];
+const numbers = [10, 4, 56, 78, 23, 45, 6];
 
-const newNumbers = numbers.filter(function(num){
-  return num>20;
-})//filter
+const newNumbers = numbers.filter((num) => num > 20); //filter
 console.log(newNumbers);
 
-const add = numbers.reduce(function(accum, num){
+const add = numbers.reduce((accum, num) => {
   console.log("Accum: " + accum);
   console.log("Num: " + num);
   return accum + num;
-})//reduce
+}); //reduce
 console.log(add);
 
 //map/reduce/filter
-var desc = emojipedia.map(function (descrip) {
-  return (descrip.meaning.substring(0,100));
-})//map
+var desc = emojipedia.map((descrip) => descrip.meaning.substring(0, 100)); //map
 
 console.log(desc);
