@@ -1,13 +1,12 @@
 import React from "react";
-import Login from "./Login";
-import Register from "./Register";
+import Form from "./Form";
 
-var isRegistered = true;
+var isRegistered = false;
 
 function App() {
   return (
     <div className="container">
-      {isRegistered === true ? <Login user = "Login"/> : <Register user="Register"/>}
+      <Form choice={isRegistered}/>
     </div>
   );
 }
