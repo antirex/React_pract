@@ -1,23 +1,13 @@
 import React from "react";
 import Login from "./Login";
+import Register from "./Register";
 
-var isLoggedIn = false;
-const date = new Date().getHours();
-
-// function renderConditionality() {
-//   if (isLoggedIn) {
-//     return <h1>Hello User!</h1>;
-//   } else {
-//     return <Login />;
-//   }
-// }
+var isRegistered = true;
 
 function App() {
   return (
     <div className="container">
-      {isLoggedIn === true ? <h1>Hello User!</h1> : <Login />}
-      {date > 10 && <p>Boombaalaaa</p>}
-      {/* here we are using the react && where it checks if cond true then render p tag or else nothing  */}
+      {isRegistered === true ? <Login user = "Login"/> : <Register user="Register"/>}
     </div>
   );
 }
